@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foco Green Soluções Ambientais | Regularização Ambiental para Mineração</title>
+<meta name="description" content="Regularização ambiental completa para mineradoras. Diagnóstico Ambiental Gratuito. 10 anos no setor mineral e mais de 100 licenças emitidas. Enquanto você cuida da operação, nós cuidamos da regularização.">
+<meta property="og:title" content="Foco Green Soluções Ambientais | Regularização Ambiental para Mineração">
+<meta property="og:description" content="Diagnóstico Ambiental Gratuito para sua mineradora. Conduzimos cada etapa, do campo ao protocolo, até a sua licença sair.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#0b7433;
+  --verde-claro:#15a04a;
+  --verde-escuro:#3f5e34;
+  --verde-deep:#0f2417;
+  --verde-deep2:#16301f;
+  --taupe:#726c5a;
+  --preto:#2b2b2b;
+  --ardosia:#555b5e;
+  --off:#f2f2f0;
+  --branco:#ffffff;
+  --wpp:#25D366;
+  --linha:rgba(43,43,43,.10);
+  --sombra:0 18px 50px -18px rgba(15,36,23,.30);
+  --sombra-sm:0 8px 24px -10px rgba(15,36,23,.25);
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--preto);background:var(--off);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Manrope',sans-serif;line-height:1.12;color:var(--verde-deep);letter-spacing:-.02em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'Manrope',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--verde);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--verde);display:inline-block}
+.eyebrow.light{color:#9fe3b6}
+.eyebrow.light::before{background:#9fe3b6}
+.sec{padding:96px 0}
+.sec-title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;margin:18px 0 0}
+.lead{font-size:1.12rem;color:var(--ardosia);max-width:62ch;margin-top:18px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:11px;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.02rem;padding:17px 30px;border-radius:60px;cursor:pointer;border:none;transition:transform .2s ease,box-shadow .2s ease;line-height:1}
+.btn svg{width:21px;height:21px;flex-shrink:0}
+.btn-wpp{background:var(--wpp);color:#06351b;box-shadow:0 14px 30px -10px rgba(37,211,102,.55)}
+.btn-wpp:hover{transform:translateY(-3px);box-shadow:0 20px 40px -12px rgba(37,211,102,.65)}
+.btn-green{background:var(--verde);color:#fff;box-shadow:0 14px 30px -12px rgba(11,116,51,.55)}
+.btn-green:hover{transform:translateY(-3px)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-sm{padding:12px 22px;font-size:.92rem}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;transition:.3s}
+header.scrolled{background:rgba(15,36,23,.92);backdrop-filter:blur(12px);box-shadow:0 6px 24px -12px rgba(0,0,0,.5)}
+header.scrolled .navbar{padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:42px;width:auto;transition:.3s}
+header.scrolled .brand img{height:36px}
+.brand-name{color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.02rem;line-height:1.05}
+.brand-name span{display:block;font-weight:500;font-size:.72rem;letter-spacing:.04em;color:#9fe3b6}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{color:rgba(255,255,255,.82);font-size:.93rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{margin-left:6px}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+.menu-toggle span{width:24px;height:2px;background:#fff;display:block;transition:.3s}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(1200px 700px at 80% -10%,#1c4329 0,var(--verde-deep) 55%),var(--verde-deep);overflow:hidden;padding:140px 0 90px}
+.hero::after{content:"";position:absolute;inset:0;background:url('assets/operacao-pedreira.jpg') center 65%/cover no-repeat;opacity:.20;-webkit-mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,.5) 60%,#000);mask-image:linear-gradient(to bottom,transparent,rgba(0,0,0,.5) 60%,#000)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.1rem,4.6vw,3.55rem);font-weight:800;margin:22px 0}
+.hero h1 b{color:#7fe0a0;font-weight:800}
+.hero p.sub{color:rgba(255,255,255,.85);font-size:1.14rem;max-width:55ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
+.hero-micro{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.7);font-size:.9rem;margin-top:18px}
+.hero-micro svg{width:17px;height:17px;color:#7fe0a0}
+.hero-photo{position:relative}
+.hero-photo .frame{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.12)}
+.hero-photo .frame img{width:100%;aspect-ratio:3/3.4;object-fit:cover;object-position:center top}
+.hero-photo .glow{position:absolute;inset:-30px;background:radial-gradient(circle at 50% 40%,rgba(21,160,74,.35),transparent 65%);z-index:-1;filter:blur(20px)}
+.float-badge{position:absolute;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-radius:16px;padding:14px 18px;box-shadow:var(--sombra);display:flex;align-items:center;gap:12px}
+.float-badge .n{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.5rem;color:var(--verde);line-height:1}
+.float-badge .t{font-size:.74rem;color:var(--ardosia);font-weight:600;line-height:1.2;max-width:13ch}
+.fb1{bottom:24px;left:-26px}
+.fb2{top:26px;right:-22px}
+.fb2 .dot{width:9px;height:9px;border-radius:50%;background:var(--wpp);box-shadow:0 0 0 4px rgba(37,211,102,.2)}
+
+/* Trust bar */
+.trustbar{background:var(--verde-deep2);border-top:1px solid rgba(255,255,255,.07)}
+.trust-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 46px;padding:26px 0}
+.trust-item{display:flex;align-items:center;gap:12px;color:#dbe9df;font-weight:600;font-size:.98rem}
+.trust-item svg{width:22px;height:22px;color:#7fe0a0;flex-shrink:0}
+
+/* Section generic */
+.kicker-center{text-align:center;display:flex;flex-direction:column;align-items:center}
+.kicker-center .lead{margin-left:auto;margin-right:auto}
+
+/* Problema */
+.problema{background:var(--off)}
+.prob-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
+.prob-card{background:#fff;border:1px solid var(--linha);border-radius:var(--r);padding:30px;transition:.25s;position:relative;overflow:hidden}
+.prob-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--verde-escuro);opacity:.0;transition:.25s}
+.prob-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-sm)}
+.prob-card:hover::before{opacity:1}
+.prob-ico{width:50px;height:50px;border-radius:13px;background:rgba(11,116,51,.09);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.prob-ico svg{width:26px;height:26px;color:var(--verde)}
+.prob-card h3{font-size:1.2rem;margin-bottom:9px}
+.prob-card p{color:var(--ardosia);font-size:.98rem}
+
+/* Banda imagem */
+.band{position:relative;padding:110px 0;background:linear-gradient(rgba(15,36,23,.70),rgba(15,36,23,.80)),url('assets/operacao-pedreira.jpg') center 60%/cover;color:#fff}
+.band .wrap{position:relative;z-index:2;text-align:center}
+.band h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.6rem);max-width:20ch;margin:14px auto 0}
+.band p{color:rgba(255,255,255,.82);max-width:60ch;margin:18px auto 0;font-size:1.08rem}
+
+/* Solução */
+.solucao{background:#fff}
+.sol-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px;align-items:center}
+.sol-list{list-style:none;margin-top:26px;display:grid;gap:16px}
+.sol-list li{display:flex;gap:14px;align-items:flex-start;font-size:1.02rem}
+.sol-list .ck{width:26px;height:26px;border-radius:50%;background:var(--verde);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.sol-list .ck svg{width:15px;height:15px;color:#fff}
+.sol-card{background:linear-gradient(160deg,var(--verde-deep),var(--verde-deep2));border-radius:24px;padding:42px;color:#fff;box-shadow:var(--sombra);position:relative;overflow:hidden}
+.sol-card::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(21,160,74,.35),transparent 70%);top:-80px;right:-60px}
+.sol-card .price{font-family:'Manrope',sans-serif;font-weight:800;font-size:2.6rem;color:#7fe0a0;line-height:1}
+.sol-card .price small{font-size:1rem;color:rgba(255,255,255,.7);font-weight:500;display:block;margin-top:6px}
+.sol-card h3{color:#fff;font-size:1.5rem;margin:22px 0 10px}
+.sol-card p{color:rgba(255,255,255,.82)}
+.sol-card .btn{margin-top:26px;width:100%;justify-content:center}
+
+/* Método 360 */
+.metodo{background:var(--off)}
+.met-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+.met-photo{border-radius:24px;overflow:hidden;box-shadow:var(--sombra);position:relative}
+.met-photo img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.met-tag{position:absolute;left:20px;bottom:20px;background:rgba(15,36,23,.86);backdrop-filter:blur(6px);color:#fff;padding:10px 16px;border-radius:30px;font-size:.85rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.met-tag .dot{width:8px;height:8px;border-radius:50%;background:#7fe0a0}
+.steps{display:grid;gap:14px}
+.step{display:flex;gap:18px;background:#fff;border:1px solid var(--linha);border-radius:16px;padding:22px 24px;transition:.25s}
+.step:hover{box-shadow:var(--sombra-sm);transform:translateX(4px)}
+.step .num{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.05rem;color:#fff;background:var(--verde);min-width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step h4{font-size:1.12rem;margin-bottom:3px}
+.step p{color:var(--ardosia);font-size:.96rem}
+
+/* Autoridade */
+.autoridade{background:#fff;overflow:hidden}
+.aut-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.aut-photos{position:relative;display:grid;grid-template-columns:1fr;gap:0}
+.aut-photos .big{border-radius:22px;overflow:hidden;box-shadow:var(--sombra);border:6px solid #fff;position:relative;z-index:2;max-width:380px}
+.aut-photos .big img{width:100%;aspect-ratio:3/3.7;object-fit:cover;object-position:center top}
+.aut-photos .small{position:absolute;width:200px;border-radius:18px;overflow:hidden;box-shadow:var(--sombra);border:5px solid #fff;bottom:-26px;right:0;z-index:3}
+.aut-photos .small img{width:100%;aspect-ratio:1/1.18;object-fit:cover;object-position:center top}
+.aut-name{font-size:1.7rem;font-weight:800;margin-top:18px}
+.aut-role{color:var(--verde);font-weight:700;font-family:'Manrope',sans-serif;font-size:.95rem;letter-spacing:.02em;margin-top:4px}
+.aut-bio{color:var(--ardosia);font-size:1.06rem;margin-top:20px}
+.aut-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.aut-stat{background:var(--off);border-radius:14px;padding:18px 22px;flex:1;min-width:150px}
+.aut-stat .n{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--verde)}
+.aut-stat .t{font-size:.86rem;color:var(--ardosia);font-weight:600;margin-top:2px}
+.aut-team{margin-top:24px;background:linear-gradient(135deg,rgba(11,116,51,.07),rgba(63,94,52,.07));border:1px solid rgba(11,116,51,.14);border-radius:16px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.aut-team svg{width:24px;height:24px;color:var(--verde);flex-shrink:0;margin-top:2px}
+.aut-team b{color:var(--verde-deep)}
+.aut-team p{font-size:.97rem;color:var(--ardosia)}
+
+/* Diferencial band */
+.dif{background:linear-gradient(135deg,var(--verde),var(--verde-escuro));color:#fff;text-align:center;padding:80px 0}
+.dif h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.4rem);max-width:24ch;margin:0 auto}
+.dif p{color:rgba(255,255,255,.85);max-width:54ch;margin:16px auto 0;font-size:1.08rem}
+
+/* Provas */
+.provas{background:var(--off)}
+.rating{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.stars{display:flex;gap:3px}
+.stars svg{width:22px;height:22px;color:#f4b400}
+.rating .txt{color:var(--ardosia);font-weight:600;font-size:.95rem}
+.dep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:46px}
+.dep{background:#fff;border:1px solid var(--linha);border-radius:var(--r);padding:32px;position:relative}
+.dep .quote{font-size:2.6rem;font-family:'Manrope',sans-serif;color:rgba(11,116,51,.18);line-height:.6;font-weight:800}
+.dep p{font-size:1.05rem;color:var(--preto);margin:8px 0 22px;font-style:italic}
+.dep .who{display:flex;align-items:center;gap:13px}
+.dep .av{width:46px;height:46px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem}
+.dep .who b{display:block;font-family:'Manrope',sans-serif;color:var(--verde-deep);font-size:1rem}
+.dep .who span{font-size:.83rem;color:var(--ardosia)}
+.dep .gstars{display:flex;gap:2px;margin-top:3px}
+.dep .gstars svg{width:14px;height:14px;color:#f4b400}
+
+/* CTA final */
+.cta-final{position:relative;padding:120px 0;background:linear-gradient(rgba(15,36,23,.80),rgba(15,36,23,.88)),url('assets/metodo-campo.jpg') center 40%/cover;color:#fff;text-align:center}
+.cta-final .wrap{position:relative;z-index:2}
+.cta-final h2{color:#fff;font-size:clamp(2rem,4.4vw,3.1rem);max-width:20ch;margin:18px auto 0}
+.cta-final p{color:rgba(255,255,255,.85);max-width:56ch;margin:20px auto 0;font-size:1.12rem}
+.cta-final .btn{margin-top:34px}
+.cta-final .micro{margin-top:18px;color:rgba(255,255,255,.65);font-size:.92rem}
+
+/* FAQ */
+.faq{background:#fff}
+.faq-list{max-width:780px;margin:46px auto 0}
+.faq-item{border-bottom:1px solid var(--linha)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:24px 0;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.1rem;color:var(--verde-deep);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.faq-q .ico{width:28px;height:28px;border-radius:50%;background:rgba(11,116,51,.1);color:var(--verde);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.3s;font-size:1.3rem;line-height:1}
+.faq-item.open .faq-q .ico{transform:rotate(45deg);background:var(--verde);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 0 24px;color:var(--ardosia);font-size:1.02rem}
+
+/* Footer */
+footer{background:var(--verde-deep);color:rgba(255,255,255,.7);padding:70px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand img{height:50px;margin-bottom:18px}
+.foot-brand p{font-size:.95rem;max-width:38ch}
+.foot-col h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.foot-col a,.foot-col p{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:11px;transition:.2s}
+.foot-col a:hover{color:#7fe0a0}
+.foot-col svg{width:17px;height:17px;color:#7fe0a0;flex-shrink:0}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:26px;font-size:.85rem;color:rgba(255,255,255,.5)}
+
+/* WhatsApp float */
+.wpp-float{position:fixed;bottom:26px;right:26px;z-index:200;width:62px;height:62px;border-radius:50%;background:var(--wpp);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);animation:pulse 2.4s infinite}
+.wpp-float svg{width:33px;height:33px;color:#fff}
+@keyframes pulse{0%{box-shadow:0 12px 30px -8px rgba(37,211,102,.6),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 12px 30px -8px rgba(37,211,102,.6),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 12px 30px -8px rgba(37,211,102,.6),0 0 0 0 rgba(37,211,102,0)}}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:960px){
+  .nav-links{position:fixed;top:0;right:-100%;height:100vh;width:78%;max-width:320px;background:var(--verde-deep);flex-direction:column;justify-content:center;gap:26px;transition:.35s;box-shadow:-10px 0 40px rgba(0,0,0,.4)}
+  .nav-links.open{right:0}
+  .menu-toggle{display:flex}
+  .hero-grid,.sol-grid,.met-grid,.aut-grid{grid-template-columns:1fr;gap:44px}
+  .hero-photo{max-width:380px;margin:0 auto}
+  .prob-grid,.dep-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .band{background-attachment:scroll}
+  .cta-final{background-attachment:scroll}
+  .aut-photos .small{position:relative;width:auto;max-width:380px;bottom:0;margin:18px auto 0}
+}
+@media(max-width:560px){
+  .sec{padding:68px 0}
+  .hero{padding:120px 0 70px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .float-badge{display:none}
+  .wrap{padding:0 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="wrap navbar">
+    <a href="#topo" class="brand">
+      <img src="assets/logo-branco.png" alt="Foco Green Soluções Ambientais">
+      <span class="brand-name">Foco Green<span>Soluções Ambientais</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#problema">O risco</a>
+      <a href="#diagnostico">Diagnóstico</a>
+      <a href="#metodo">Método 360</a>
+      <a href="#sobre">Quem somos</a>
+      <a href="#depoimentos">Resultados</a>
+      <a class="btn btn-wpp btn-sm nav-cta" href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito%20para%20minha%20mineradora." target="_blank" rel="noopener">Diagnóstico Gratuito</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow light">Regularização ambiental para mineração</span>
+      <h1>Enquanto você cuida da operação, nós cuidamos de <b>toda a regularização ambiental</b> da sua mina.</h1>
+      <p class="sub">Operar sem licença, ou com a licença vencida, coloca anos de investimento sob risco de embargo, paralisação e multas que chegam à casa dos milhões. A Foco Green conduz cada etapa, do campo ao protocolo, até a sua licença sair.</p>
+      <div class="hero-cta">
+        <a class="btn btn-wpp" href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito%20para%20minha%20mineradora." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.7-1 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.8.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2z"/></svg>
+          Quero meu Diagnóstico Gratuito
+        </a>
+        <a class="btn btn-ghost" href="#metodo">Como funciona</a>
+      </div>
+      <div class="hero-micro">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Análise inicial sem custo e sem compromisso. Resposta direto no WhatsApp.
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="glow"></div>
+      <div class="frame"><img src="assets/fabiana-hero.jpg" alt="Fabiana Dias, Engenheira Ambiental da Foco Green, em campo"></div>
+      <div class="float-badge fb1"><span class="n">+100</span><span class="t">licenças e autorizações emitidas</span></div>
+      <div class="float-badge fb2"><span class="dot"></span><span class="t" style="max-width:15ch"><b style="color:var(--verde-deep)">10 anos</b> no setor mineral</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trustbar">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg> 10 anos no setor mineral</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke-linecap="round" stroke-linejoin="round"/></svg> +100 licenças e autorizações</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M16 14c2.5.3 4 2 4 5" stroke-linecap="round"/></svg> Equipe técnica multidisciplinar</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5-7-11a7 7 0 0114 0c0 6-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg> Minas Gerais · atuação nacional</div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section class="sec problema" id="problema">
+  <div class="wrap">
+    <div class="kicker-center reveal">
+      <span class="eyebrow">O que está em jogo</span>
+      <h2 class="sec-title">O risco não é a fiscalização chegar.<br>É ela chegar antes de você se regularizar.</h2>
+      <p class="lead">Na mineração, a parte ambiental é o que decide se a operação continua de pé. E o problema raramente avisa antes de virar processo.</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke-linecap="round"/></svg></div>
+        <h3>Operação sem licença ambiental</h3>
+        <p>Muitos empreendimentos minerários operam sem o licenciamento exigido, às vezes sem dimensionar o tamanho da exposição que isso representa.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Licença vencida ou condicionantes em aberto</h3>
+        <p>Um prazo perdido ou uma condicionante não cumprida é o suficiente para abrir um processo administrativo contra o empreendimento.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" stroke-linejoin="round"/></svg></div>
+        <h3>Embargo e paralisação</h3>
+        <p>Um embargo pode durar 12 meses ou mais: exatamente o tempo necessário para regularizar um empreendimento. Esse é tempo de máquina parada e receita interrompida.</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Multas e passivos</h3>
+        <p>Em atividade minerária, as autuações podem alcançar a casa dos milhões, somadas a passivos ambientais que travam financiamento, licenciamento futuro e a venda do ativo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDA -->
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow light">A virada</span>
+    <h2>Você não precisa entender de licenciamento. Precisa de quem entenda e assuma por você.</h2>
+    <p>A Foco Green nasceu para tirar a regularização ambiental das suas costas: do diagnóstico inicial à licença na mão, com acompanhamento até depois dela.</p>
+  </div>
+</section>
+
+<!-- SOLUÇÃO / DIAGNÓSTICO -->
+<section class="sec solucao" id="diagnostico">
+  <div class="wrap sol-grid">
+    <div class="reveal">
+      <span class="eyebrow">Por onde começar</span>
+      <h2 class="sec-title">Comece sabendo exatamente onde a sua mina está.</h2>
+      <p class="lead">O <b>Diagnóstico Ambiental Gratuito</b> é uma análise inicial da situação do seu empreendimento: o que já está regular, o que está em risco e o que precisa ser resolvido primeiro. Sem juridiquês e sem compromisso.</p>
+      <ul class="sol-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Leitura da situação atual: com licença, vencida ou sem licenciamento.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Identificação dos principais riscos de embargo e autuação.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Caminho de regularização, em ordem de prioridade.</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Uma conversa técnica, direta, com quem vive o setor.</li>
+      </ul>
+    </div>
+    <div class="sol-card reveal">
+      <div class="price">R$ 0<small>Diagnóstico Ambiental, sem custo e sem compromisso</small></div>
+      <h3>Dê o primeiro passo hoje</h3>
+      <p>Mande uma mensagem agora e conte, em poucas palavras, a situação da sua mineradora. A partir daí, a Foco Green assume a parte técnica.</p>
+      <a class="btn btn-wpp" href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito.%20Minha%20situa%C3%A7%C3%A3o%20%C3%A9%3A" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2zM17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.7-1 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.8.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+        Falar com a Foco Green
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO 360 -->
+<section class="sec metodo" id="metodo">
+  <div class="wrap">
+    <div class="kicker-center reveal">
+      <span class="eyebrow">Como conduzimos</span>
+      <h2 class="sec-title">O Método 360:<br>condução completa, não só protocolo.</h2>
+      <p class="lead">A maioria entrega um documento e some. Aqui, a Foco Green caminha com você do campo até depois da licença emitida.</p>
+    </div>
+    <div class="met-grid">
+      <div class="met-photo reveal">
+        <img src="assets/metodo-campo.jpg" alt="Equipe técnica da Foco Green em vistoria de campo em pedreira">
+        <div class="met-tag"><span class="dot"></span> Visita técnica em campo, no seu empreendimento</div>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="num">01</div><div><h4>Campo</h4><p>Visita técnica e leitura real do empreendimento, no local, onde os riscos e as oportunidades de fato aparecem.</p></div></div>
+        <div class="step reveal"><div class="num">02</div><div><h4>Escritório</h4><p>Análise documental, enquadramento legal e definição da estratégia de regularização mais segura e rápida para o seu caso.</p></div></div>
+        <div class="step reveal"><div class="num">03</div><div><h4>Protocolo</h4><p>Elaboração técnica e protocolo junto aos órgãos ambientais competentes, com acompanhamento de cada exigência.</p></div></div>
+        <div class="step reveal"><div class="num">04</div><div><h4>Acompanhamento</h4><p>Condução do processo e das condicionantes até a licença sair. E a gestão continua válida depois dela.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTORIDADE / SOBRE -->
+<section class="sec autoridade" id="sobre">
+  <div class="wrap aut-grid">
+    <div class="aut-photos reveal">
+      <div class="big"><img src="assets/fabiana-sobre.jpg" alt="Fabiana Dias, Engenheira Ambiental e fundadora da Foco Green"></div>
+      <div class="small"><img src="assets/fabiana-autoridade.jpg" alt="Fabiana Dias"></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Quem vai conduzir a regularização da sua mina</span>
+      <div class="aut-name">Fabiana Dias</div>
+      <div class="aut-role">Engenheira Ambiental · Fundadora da Foco Green Soluções Ambientais</div>
+      <p class="aut-bio">Engenheira Ambiental à frente da Foco Green Soluções Ambientais, com atuação em todo o ciclo da mineração, da análise de viabilidade ao licenciamento, gestão ambiental e mineral ao fechamento da mina. Atendimento técnico, ético e direto, do jeito que o empresário do setor precisa.</p>
+      <div class="aut-stats">
+        <div class="aut-stat"><div class="n">10 anos</div><div class="t">de atuação no setor mineral</div></div>
+        <div class="aut-stat"><div class="n">+100</div><div class="t">licenças e autorizações emitidas</div></div>
+      </div>
+      <div class="aut-team">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M16 14c2.5.3 4 2 4 5" stroke-linecap="round"/></svg>
+        <p><b>Equipe técnica multidisciplinar</b> com engenheiro de minas, engenheiro florestal, biólogo e engenheiro ambiental. Cada frente da sua regularização nas mãos de quem é especialista nela.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="dif">
+  <div class="wrap">
+    <h2>Não entregamos um protocolo e desaparecemos. Conduzimos a sua regularização até o fim.</h2>
+    <p>O nosso foco é no resultado do cliente: a sua mina operando com a parte ambiental resolvida e protegida.</p>
+  </div>
+</section>
+
+<!-- PROVAS -->
+<section class="sec provas" id="depoimentos">
+  <div class="wrap">
+    <div class="kicker-center reveal">
+      <span class="eyebrow">Quem já confiou na Foco Green</span>
+      <h2 class="sec-title">Resultado que vira recomendação.</h2>
+      <div class="rating">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg>
+        </div>
+        <span class="txt">Avaliações reais de clientes no Google</span>
+      </div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep reveal">
+        <div class="quote">&ldquo;</div>
+        <p>Atendimento profissional, serviços rápidos e de acordo com as exigências e normas ambientais. Recomendo. Fui muito bem atendido e, sempre que preciso, o atendimento é excelente.</p>
+        <div class="who">
+          <div class="av">R</div>
+          <div><b>Rui Dalmas</b><span>Cliente · Google · Local Guide</span><div class="gstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg></div></div>
+        </div>
+      </div>
+      <div class="dep reveal">
+        <div class="quote">&ldquo;</div>
+        <p>Nunca fui tão bem assessorado como estou sendo na Foco. Trabalho sério e competência: é isso que encontrei na Foco Green.</p>
+        <div class="who">
+          <div class="av">C</div>
+          <div><b>Carlos Alexandre Morais Prado</b><span>Cliente · Google</span><div class="gstars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.9 21l1.2-6.8-5-4.9 6.9-1L12 2z"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <span class="eyebrow light">Sua mina protegida começa com uma conversa</span>
+    <h2>Quanto tempo sua operação aguenta exposta?</h2>
+    <p>Cada dia sem regularização é um dia a mais de risco de embargo e autuação. Comece pelo Diagnóstico Ambiental Gratuito e descubra exatamente o que precisa ser feito, na ordem certa.</p>
+    <a class="btn btn-wpp" href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito%20para%20minha%20mineradora." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2zM17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.7-1 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.8.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+      Solicitar Diagnóstico Gratuito agora
+    </a>
+    <p class="micro">Atendimento direto com a equipe técnica · Minas Gerais e todo o Brasil</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="kicker-center reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 class="sec-title">O que os mineradores mais perguntam</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q">Minha mina opera sem nenhuma licença ambiental. Vocês assumem mesmo assim?<span class="ico">+</span></button><div class="faq-a"><p>Sim. Boa parte dos casos que conduzimos começa exatamente assim, com empreendimentos operando sem o licenciamento exigido. O Diagnóstico mostra o tamanho da exposição e o caminho para regularizar, na ordem que reduz o risco mais rápido.</p></div></div>
+      <div class="faq-item"><button class="faq-q">A Foco Green atende fora de Minas Gerais?<span class="ico">+</span></button><div class="faq-a"><p>Sim. A base é em Minas Gerais, no Vale do Mucuri, com atuação em todo o território nacional.</p></div></div>
+      <div class="faq-item"><button class="faq-q">O Diagnóstico Ambiental é realmente gratuito?<span class="ico">+</span></button><div class="faq-a"><p>É. A análise inicial da situação do seu empreendimento é feita sem custo e sem compromisso. Você sai dela sabendo o que está regular, o que está em risco e o que precisa ser resolvido primeiro.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Quanto tempo leva para regularizar um empreendimento?<span class="ico">+</span></button><div class="faq-a"><p>Depende do porte, da situação atual e dos órgãos envolvidos. Como referência, processos de regularização e embargos costumam se desenrolar ao longo de 12 meses ou mais, por isso quanto antes começar, menor o tempo de exposição. O Diagnóstico traz uma estimativa para o seu caso específico.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Que tipo de empreendimento vocês atendem?<span class="ico">+</span></button><div class="faq-a"><p>Atuamos em todo o ciclo da mineração, da análise de viabilidade ao licenciamento, passando pela gestão ambiental e mineral, até o fechamento da mina, com foco em pequenas e médias mineradoras.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-branco.png" alt="Foco Green Soluções Ambientais">
+        <p>Foco Green Soluções Ambientais. Regularização ambiental completa para mineração, do campo ao protocolo, até a sua licença sair. Nosso foco é no resultado do cliente.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg> WhatsApp: (33) 98857-4497</a>
+        <a href="https://instagram.com/focogreen.ambiental" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @focogreen.ambiental</a>
+        <a href="https://focogreenambiental.com.br" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg> focogreenambiental.com.br</a>
+      </div>
+      <div class="foot-col">
+        <h4>Atuação</h4>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5-7-11a7 7 0 0114 0c0 6-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg> Vale do Mucuri · Minas Gerais</p>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg> Atendimento em todo o Brasil</p>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg> Licenciamento · Gestão ambiental e mineral</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Foco Green Soluções Ambientais. Todos os direitos reservados.</span>
+      <span>Eng. Ambiental Fabiana Dias</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a class="wpp-float" href="https://wa.me/5533988574497?text=Ol%C3%A1!%20Quero%20meu%20Diagn%C3%B3stico%20Ambiental%20Gratuito%20para%20minha%20mineradora." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.7-1 2.8 0 1.7 1.2 3.3 1.4 3.5.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.8.7-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20.2 12 20.2z"/></svg>
+</a>
+
+<script>
+// Header scroll
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>40));
+// Mobile menu
+const tog=document.getElementById('menuToggle'),nav=document.getElementById('navLinks');
+tog.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const it=q.parentElement,a=q.nextElementSibling,open=it.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+    if(!open){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+// Reveal on scroll
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
