@@ -8,6 +8,22 @@
 <meta property="og:title" content="Foco Green Soluções Ambientais | Regularização Ambiental para Mineração">
 <meta property="og:description" content="Diagnóstico Ambiental Gratuito para sua mineradora. Conduzimos cada etapa, do campo ao protocolo, até a sua licença sair.">
 <meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/logo-original.png">
+<link rel="apple-touch-icon" href="assets/logo-original.png">
+<!-- ================= META PIXEL (Facebook) =================
+     A pagina ja esta pronta para o Pixel. Quando tiver o ID,
+     cole o numero entre as aspas em META_PIXEL_ID abaixo e
+     suba o index.html de novo. Enquanto vazio, fica inativo. -->
+<script>
+window.META_PIXEL_ID = ""; /* <<< COLE AQUI O ID DO PIXEL, ex.: "123456789012345" */
+(function(){
+  if(!window.META_PIXEL_ID) return;
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', window.META_PIXEL_ID);
+  fbq('track', 'PageView');
+})();
+</script>
+<!-- =============== FIM META PIXEL =============== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -562,6 +578,10 @@ document.querySelectorAll('.faq-q').forEach(q=>{
 // Reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+// Meta Pixel: dispara evento de Lead ao clicar em qualquer botao de WhatsApp
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(a){
+  a.addEventListener('click',function(){ if(window.fbq){ fbq('track','Lead'); fbq('trackCustom','WhatsAppClick'); } });
+});
 </script>
 </body>
 </html>
